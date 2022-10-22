@@ -1,5 +1,6 @@
 '''
     File name: fdxb-calc.py
+    Version: 1.0
     Author name: Unded Inside
     Date created: 2022-10-01
     Date modified: 2022-10-22
