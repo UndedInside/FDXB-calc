@@ -6,7 +6,7 @@ This program takes the hexadecimal data stored on FDX-B microchips and converts,
 When working with RFID chips on the Flipper Zero, it tells you the information that is saved on the chips. If you extract the saved chip to another device, the file only contains the hexadecimal data and not the human readable information. I wrote this program to be able to get that information without needing the Flipper on-hand.
 
 ## Usage:
-Run the program with Python 3. You will then be prompted to enter the hex data. This must be 22 bytes long. Spaces are allowed but optional, as they are stripped before calculations are done.
+Run the program with Python 3. You will then be prompted to enter the hex data. This must be 22 bytes long. Any consistent non-hex delimiter character (at position 2 of the array) is allowed but optional, as they are stripped before calculations are done.
 
 ## To-Do:
 Plenty of more work can be done on this. I would like to be able to generate hex from information, to be able to add microchips to the flipper.
