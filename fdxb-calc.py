@@ -3,10 +3,19 @@
     Version: 1.0
     Author name: Unded Inside
     Date created: 2022-10-01
-    Date modified: 2022-10-22
+    Date modified: 2022-11-05
     Python version: 3.9.2
 '''
 
+def replaceInput(inputData):
+    data = inputData.lower()
+    ignoreValues = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
+    delimiter = data[2]
+    if delimiter in ignoreValues:
+        str = data
+    else:
+        str = data.replace(delimiter, "")
+    return str
 
 def hexToBin(toConvert):
     binaryString = ""
@@ -102,8 +111,8 @@ def splitData(toSplit):
 
 def main():
     userInput = input("Please enter hex string.\n: ")
-    # Strips spaces
-    userInput = userInput.replace(" ", "")
+    # Strips delimiters
+    userInput = replaceInput(userInput)
     # Checks length
     if len(userInput) != 22:
         print("Input must be 11 bytes (spaces allowed)")
